@@ -1,3 +1,4 @@
+# https://gist.github.com/wdullaer/f1af16bd7e970389bad3
 # Ask for the user password
 # Script only works if sudo caches the password for a few minutes
 sudo true
