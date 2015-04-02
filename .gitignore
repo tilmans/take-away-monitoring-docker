@@ -1,0 +1,7 @@
+elasticsearch/data
+elasticsearch/log
+graphite/log
+graphite/carbon
+graphite/collectd
+graphite/whisper
+graphite/graphite.db
