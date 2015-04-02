@@ -1,0 +1,19 @@
+graphite:
+  image: tilman/graphite
+  ports:
+    - "8080:80"
+    - "2003:2003"
+  volumes:
+    - "/Users/tschlenk/docker/graphite:/var/lib/graphite/storage/whisper"
+elasticsearch:
+  image: dockerfile/elasticsearch
+  volumes:
+    - "/Users/tschlenk/docker/elasticsearch:/data"
+  ports:
+    - "9200:9200"
+grafana:
+  image: tilman/grafana
+  ports:
+    - "8100:80"
+
+

@@ -1,0 +1,1 @@
+On Redhat 7 run the following: chcon -Rt svirt_sandbox_file_t /data 
