@@ -4,11 +4,11 @@ graphite:
     - "8080:80"
     - "2003:2003"
   volumes:
-    - "/root/take-away-monitoring-docker/graphite:/var/lib/graphite/storage/whisper"
+    - "/docker-data/take-away-monitoring-docker/graphite:/var/lib/graphite/storage/whisper"
 elasticsearch:
   image: dockerfile/elasticsearch
   volumes:
-    - "/root/take-away-monitoring-docker/elasticsearch:/data"
+    - "/docker-data/take-away-monitoring-docker/elasticsearch:/data"
   ports:
     - "9200:9200"
 grafana:
@@ -20,7 +20,7 @@ grafana2:
   ports:
     - "3000:3000"
   volumes: 
-    - "/root/take-away-monitoring-docker/grafana2/data:/opt/grafana/data"
-    - "/root/take-away-monitoring-docker/grafana2/config:/opt/grafana/config"
+    - "/docker-data/take-away-monitoring-docker/grafana2/data:/opt/grafana/data"
+    - "/docker-data/take-away-monitoring-docker/grafana2/config:/opt/grafana/config"
 
 
