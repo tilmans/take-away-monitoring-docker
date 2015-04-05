@@ -15,5 +15,12 @@ grafana:
   image: tilmans/grafana
   ports:
     - "8100:80"
+grafana2:
+  image: grafana/grafana
+  ports:
+    - "3000:3000"
+  volumes: 
+    - "/root/take-away-monitoring-docker/grafana2/data:/opt/grafana/data"
+    - "/root/take-away-monitoring-docker/grafana2/config:/opt/grafana/config"
 
 
