@@ -5,3 +5,4 @@ graphite/carbon
 graphite/collectd
 graphite/whisper
 graphite/graphite.db
+.vagrant
