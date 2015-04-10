@@ -4,15 +4,17 @@ Docker based monitoring VM with Graphite and Grafana
 ## Setup
 ### Ubuntu 14.04
 
-	mkdir /docker-data
-	chmod 777 /docker-data
+	sudo mkdir /docker-data
+	sudo chmod 777 /docker-data
 	sudo apt-get update
 	sudo apt-get upgrade
-	sudo apt-get install git
+	sudo apt-get install git ntp
+	sudo service ntp start
+	sudo update-rc.d ntp start 20 2 3
 	git clone https://github.com/tilmans/take-away-monitoring-docker.git
 	cd take-away-monitoring-docker
-	mkdir /docker-data/elasticsearch
-	cp elasticsearch/elasticsearch.yml /docker-data/elasticsearch/
+	sudo mkdir /docker-data/elasticsearch
+	sudo cp elasticsearch.yml /docker-data/elasticsearch/
 	sudo sh install-ubuntu.sh
 	sudo docker-compose up
 
