@@ -22,5 +22,13 @@ grafana2:
   volumes: 
     - "/docker-data/grafana2/data:/opt/grafana/data"
     - "/docker-data/grafana2/config:/opt/grafana/config"
+statsd:
+  image: tilmans/statsd
+  ports:
+    - "8125:8125/udp"
+  links: 
+    - graphite
+  environment:
+    GRAPHITE_HOST: graphite_1
 
 
