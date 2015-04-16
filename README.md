@@ -10,7 +10,6 @@ Docker based monitoring VM with Graphite and Grafana
 	sudo apt-get upgrade
 	sudo apt-get install git ntp
 	sudo service ntp start
-	sudo update-rc.d ntp start 20 2 3
 	git clone https://github.com/tilmans/take-away-monitoring-docker.git
 	cd take-away-monitoring-docker
 	sudo mkdir /docker-data/elasticsearch
